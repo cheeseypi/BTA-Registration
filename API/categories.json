@@ -1,0 +1,242 @@
+{
+    "id": "o1y9j9v6",
+    "name": "Celeste",
+    "levels": [
+        {
+            "id": "ywe5zq7w",
+            "name": "1 - Forsaken City",
+            "categories": [
+                {
+                    "id": "7dgr144k",
+                    "name": "A-Side"
+                },
+                {
+                    "id": "5dw5q7gd",
+                    "name": "B-Side"
+                },
+                {
+                    "id": "wk67rved",
+                    "name": "C-Side"
+                },
+                {
+                    "id": "mkezwq9k",
+                    "name": "Collectibles"
+                }
+            ]
+        },
+        {
+            "id": "69z2m8g9",
+            "name": "2 - Old Site",
+            "categories": [
+                {
+                    "id": "7dgr144k",
+                    "name": "A-Side"
+                },
+                {
+                    "id": "5dw5q7gd",
+                    "name": "B-Side"
+                },
+                {
+                    "id": "wk67rved",
+                    "name": "C-Side"
+                },
+                {
+                    "id": "mkezwq9k",
+                    "name": "Collectibles"
+                }
+            ]
+        },
+        {
+            "id": "r9g4k7p9",
+            "name": "3 - Celestial Resort",
+            "categories": [
+                {
+                    "id": "7dgr144k",
+                    "name": "A-Side"
+                },
+                {
+                    "id": "5dw5q7gd",
+                    "name": "B-Side"
+                },
+                {
+                    "id": "wk67rved",
+                    "name": "C-Side"
+                },
+                {
+                    "id": "mkezwq9k",
+                    "name": "Collectibles"
+                }
+            ]
+        },
+        {
+            "id": "o9x7mxpd",
+            "name": "4 - Golden Ridge",
+            "categories": [
+                {
+                    "id": "7dgr144k",
+                    "name": "A-Side"
+                },
+                {
+                    "id": "5dw5q7gd",
+                    "name": "B-Side"
+                },
+                {
+                    "id": "wk67rved",
+                    "name": "C-Side"
+                },
+                {
+                    "id": "mkezwq9k",
+                    "name": "Collectibles"
+                }
+            ]
+        },
+        {
+            "id": "4955vm39",
+            "name": "5 - Mirror Temple",
+            "categories": [
+                {
+                    "id": "7dgr144k",
+                    "name": "A-Side"
+                },
+                {
+                    "id": "5dw5q7gd",
+                    "name": "B-Side"
+                },
+                {
+                    "id": "wk67rved",
+                    "name": "C-Side"
+                },
+                {
+                    "id": "mkezwq9k",
+                    "name": "Collectibles"
+                }
+            ]
+        },
+        {
+            "id": "rdq76n29",
+            "name": "6 - Reflection",
+            "categories": [
+                {
+                    "id": "7dgr144k",
+                    "name": "A-Side"
+                },
+                {
+                    "id": "5dw5q7gd",
+                    "name": "B-Side"
+                },
+                {
+                    "id": "wk67rved",
+                    "name": "C-Side"
+                },
+                {
+                    "id": "mkezwq9k",
+                    "name": "Collectibles"
+                }
+            ]
+        },
+        {
+            "id": "5d746x6d",
+            "name": "7 - The Summit",
+            "categories": [
+                {
+                    "id": "7dgr144k",
+                    "name": "A-Side"
+                },
+                {
+                    "id": "5dw5q7gd",
+                    "name": "B-Side"
+                },
+                {
+                    "id": "wk67rved",
+                    "name": "C-Side"
+                },
+                {
+                    "id": "mkezwq9k",
+                    "name": "Collectibles"
+                }
+            ]
+        },
+        {
+            "id": "kwjzo679",
+            "name": "8 - Core",
+            "categories": [
+                {
+                    "id": "7dgr144k",
+                    "name": "A-Side"
+                },
+                {
+                    "id": "5dw5q7gd",
+                    "name": "B-Side"
+                },
+                {
+                    "id": "wk67rved",
+                    "name": "C-Side"
+                },
+                {
+                    "id": "mkezwq9k",
+                    "name": "Collectibles"
+                }
+            ]
+        },
+        {
+            "id": "5wknr4qw",
+            "name": "9 - Farewell",
+            "categories": [
+                {
+                    "id": "",
+                    "name": "Completion"
+                },
+                {
+                    "id": "mkezwq9k",
+                    "name": "Collectibles"
+                }
+            ]
+        }
+    ],
+    "categories": [
+        {
+            "id": "7kjpl1gk",
+            "name": "Any%"
+        },
+        {
+            "id": "jdz8oprd",
+            "name": "All Red Berries"
+        },
+        {
+            "id": "zdn0m372",
+            "name": "True Ending"
+        },
+        {
+            "id": "q2517ggd",
+            "name": "All Cassettes"
+        },
+        {
+            "id": "q2550mw2",
+            "name": "Bny%"
+        },
+        {
+            "id": "xd1718wd",
+            "name": "All Hearts"
+        },
+        {
+            "id": "xk9ry6xk",
+            "name": "100%"
+        },
+        {
+            "id": "z27rpe5d",
+            "name": "All Chapters"
+        },
+        {
+            "id": "zd365jyd",
+            "name": "All A-Sides"
+        },
+        {
+            "id": "zd36mqyd",
+            "name": "All B-Sides"
+        },
+        {
+            "id": "xd1ex5r2",
+            "name": "All C-Sides"
+        }
+    ]
+}
