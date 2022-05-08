@@ -3,7 +3,7 @@ import got from 'got';
 import express from 'express';
 import fs from 'fs';
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 
 let categories = JSON.parse(fs.readFileSync('categories.json'));
 /*
@@ -98,5 +98,5 @@ app.get('/RegistrationBoard', (req, res) => {
 
 app.listen(port, "0.0.0.0", () => {
     //requests("https://www.speedrun.com/api/v1/games/o1y9j9v6/levels").on('data', (chunk) => {console.log(chunk)})
-    console.log("BTA API is up and running");
+    console.log(`BTA API is up and running on port ${port}`);
 })

@@ -1,0 +1,19 @@
+version: '3'
+services:
+  api:
+    build:
+      context: API
+      dockerfile: Dockerfile
+    image: node
+    container_name: bta-reg-api
+    restart: unless-stopped
+    environment:
+      - PORT=8080
+    ports:
+      - "8080:8080"
+    networks:
+      - bta-reg-network
+    command: npm start
+networks:
+  bta-reg-network:
+    driver: bridge
