@@ -14,6 +14,18 @@ services:
     networks:
       - bta-reg-network
     command: npm start
+  web:
+    build:
+      context: Client
+      dockerfile: Dockerfile.prod
+    image: nginx:stable-alpine
+    container_name: bta-reg-web
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    networks:
+      - bta-reg-network
+    command: nginx -g "daemon off;"
 networks:
   bta-reg-network:
     driver: bridge
