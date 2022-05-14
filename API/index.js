@@ -2,6 +2,7 @@
 import got from 'got';
 import express from 'express';
 import fs from 'fs';
+import {SavePlayer, RetrievePlayerById, SearchPlayerByName, UpdatePlayer, DeletePlayer, RegistrationBoard} from './players.js';
 const app = express()
 const port = process.env.PORT || 3000
 
@@ -20,12 +21,11 @@ API REFERENCE
     Retrieves PBs from SRC for a user matching the given userid
 
 /Participant : POST
-  Add a participant to BTA, requires `name`, `times`, `questionnaire`. Returns participant object w/ participant ID & score
+  Add a participant to BTA, requires `name`, `times`. Returns participant object w/ participant ID & score
     /Participant/<participantId> : GET
-    /Participant/<participantName> : GET
       Retrieve participant object
+      participantId can either be the corresponding UUID or "name::<name>"
     /Participant/<participantId> : PUT, DELETE
-    /Participant/<participantName> : PUT, DELETE
       Requires admin API token; Modify or remove participants
 
 /RegistrationBoard : GET
@@ -39,6 +39,8 @@ function pprintSeconds(totalSeconds) {
     let milliseconds = Math.round((totalSeconds - Math.floor(totalSeconds)) * 1000);
     return (hours>0 ? hours + "h" : "") + minutes + "m" + seconds + "s" + milliseconds + "ms";
 }
+
+app.use(express.json());
 
 app.get('/PBs/:userId', async (req, res) => {
     let srcUserName = req.params.userId;
@@ -78,15 +80,38 @@ app.get('/PBs/:userId', async (req, res) => {
         }
         res.json(finalRet)
     }
-    else {
-        res.statusCode(404).send("Unable to find user in SRC, please make sure you haven't entered a typo");
+    else { 
+        res.statusCode = 404;
+        res.send("Unable to find user in SRC, please make sure you haven't entered a typo");
     }
 })
 
 
 app.post('/Participant', (req, res) => {
+    try{
+        let playerObj = SavePlayer({name: req.body.name, times: req.body.times});
+        res.json(playerObj);
+    }
+    catch(e){
+        res.statusCode = 500;
+        res.json({error: typeof(e), message: e.message})
+    }
 })
 app.get('/Participant/:participantIdentifier', (req, res) => {
+    try{
+        let playerObjs;
+        if(req.params.participantIdentifier.startsWith("name::")){
+            playerObjs = SearchPlayerByName(req.params.participantIdentifier.substring(6));
+        }
+        else{
+            playerObjs = [RetrievePlayerById(req.params.participantIdentifier)];
+        }
+        res.json(playerObjs);
+    }
+    catch(e){
+        res.statusCode = 500;
+        res.json({error: typeof(e), message: e.message})
+    }
 })
 
 app.put('/Participant/:participantIdentifier', (req, res) => {
@@ -96,6 +121,7 @@ app.delete('/Participant/:participantIdentifier', (req, res) => {
 
 
 app.get('/RegistrationBoard', (req, res) => {
+    res.json(RegistrationBoard())
 })
 
 app.listen(port, "0.0.0.0", () => {
